@@ -5,10 +5,18 @@ class Heliocentric {
         Scanner s = new Scanner(System.in);
         int count = 0;
 
-        for(int i = 0; i < 10; i++) {
+        for(int i = 0; i < 11; i++) {
+            System.out.println("Next line: " + s.nextLine());
+            if(i < 3) {
+                if(s.next().equals("0")) {
+                    break;
+                }
+            }
+            
             int earth = s.nextInt();
             int mars = s.nextInt();
-
+            
+          
             int newEarth = 365;
             int newMars = 687;
             if((earth - newEarth) == (mars - newMars)) {
